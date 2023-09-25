@@ -1,3 +1,98 @@
-[gd_scene format=3 uid="uid://blxy64bxr3ib5"]
+[gd_scene load_steps=4 format=3 uid="uid://blxy64bxr3ib5"]
 
-[node name="MainMenu" type="Node2D"]
+[ext_resource type="FontFile" uid="uid://df4td17th2nop" path="res://Fonts/hf-free-complete/matchup-pro-v1.1/MatchupPro.ttf" id="1_1tlew"]
+[ext_resource type="Script" path="res://Scripts/Scenes/main_menu.gd" id="1_owgh8"]
+[ext_resource type="FontFile" uid="uid://sgrj1eqkdb58" path="res://Fonts/hf-free-complete/matchup-pro-v1.1/MatchupPro.otf" id="1_ter1f"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_owgh8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 213.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_1tlew")
+theme_override_font_sizes/font_size = 100
+text = "Welcome to my Channel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start_btn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -240.0
+offset_right = 175.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ter1f")
+theme_override_font_sizes/font_size = 60
+text = "Start Game"
+
+[node name="Continue_btn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -108.0
+offset_right = 175.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ter1f")
+theme_override_font_sizes/font_size = 52
+text = "Continue Game"
+
+[node name="Option_btn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = 26.0
+offset_right = 175.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ter1f")
+theme_override_font_sizes/font_size = 50
+text = "Options"
+
+[node name="Exit_btn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = 160.0
+offset_right = 175.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_ter1f")
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+
+[connection signal="pressed" from="Start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="Exit_btn" to="." method="_on_exit_btn_pressed"]
