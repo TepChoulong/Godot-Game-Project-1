@@ -12,87 +12,66 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_owgh8")
+metadata/_edit_horizontal_guides_ = [183.0, 233.0]
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 1
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 213.0
+offset_bottom = 272.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_1tlew")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 150
 text = "Welcome to my Channel"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Start_btn" type="Button" parent="."]
-layout_mode = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -175.0
-offset_top = -240.0
-offset_right = 175.0
-offset_bottom = -180.0
+offset_left = -143.0
+offset_top = -186.0
+offset_right = 143.0
+offset_bottom = 69.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(143, 0)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 2
+
+[node name="Start_btn" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_ter1f")
 theme_override_font_sizes/font_size = 60
 text = "Start Game"
 
-[node name="Continue_btn" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -175.0
-offset_top = -108.0
-offset_right = 175.0
-offset_bottom = -48.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Continue_btn" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_ter1f")
 theme_override_font_sizes/font_size = 52
 text = "Continue Game"
 
-[node name="Option_btn" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -175.0
-offset_top = 26.0
-offset_right = 175.0
-offset_bottom = 86.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Option_btn" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_ter1f")
 theme_override_font_sizes/font_size = 50
 text = "Options"
 
-[node name="Exit_btn" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -175.0
-offset_top = 160.0
-offset_right = 175.0
-offset_bottom = 220.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Exit_btn" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_ter1f")
 theme_override_font_sizes/font_size = 40
 text = "Exit"
 
-[connection signal="pressed" from="Start_btn" to="." method="_on_start_btn_pressed"]
-[connection signal="pressed" from="Exit_btn" to="." method="_on_exit_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Start_btn" to="." method="_on_start_btn_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Exit_btn" to="." method="_on_exit_btn_pressed"]
