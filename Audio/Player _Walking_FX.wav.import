@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cxgvtyx7s077p"
+path="res://.godot/imported/Player _Walking_FX.wav-6f478af55afab316570e0ec47dcd415b.sample"
+
+[deps]
+
+source_file="res://Audio/Player _Walking_FX.wav"
+dest_files=["res://.godot/imported/Player _Walking_FX.wav-6f478af55afab316570e0ec47dcd415b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=1
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

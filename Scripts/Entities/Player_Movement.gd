@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 @onready var Animator = get_node("AnimationPlayer")
 
-
 @export var SPEED : float = 250.0
 @export var JUMP_VELOCITY : float = -400.0
 
@@ -34,6 +33,7 @@ func _physics_process(delta):
 		
 		if velocity.y == 0:
 			Animator.play("Walk")
+			
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
